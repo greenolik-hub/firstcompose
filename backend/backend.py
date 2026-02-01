@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route("/message", methods=["GET"])
 def message_get():
     return jsonify({
-        "status": "Hi from container! nigga"
+        "status": "Hi from container!"
     })
 
 if __name__ == "__main__":
