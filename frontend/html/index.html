@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Mini Project</title>
+</head>
+<body>
+  <h1>Frontend контейнер</h1>
+  <button onclick="loadMessage()">Загрузить сообщение</button>
+  <p id="result"></p>
+
+  <script>
+    async function loadMessage() {
+      const res = await fetch('/api/message');
+      const data = await res.json();
+      document.getElementById('result').innerText = data.status;
+    }
+  </script>
+</body>
+</html>
